@@ -102,8 +102,8 @@
     }
 
     function my_result(){
-        var result = document.forms['cal']['result'];
-        var calc = eval(result.value);
+        // var result = document.forms['cal']['result'];
+        var calc = eval(inp['result'].value);
 
         inp['result'].value = calc;
     }
@@ -121,7 +121,13 @@
     }
 
     result_btn.onclick = function(){
-        my_result();
+        try{
+            my_result();
+        }
+        catch(err){
+            var result = inp['result'];
+            result.value = '입력오류';
+        }
     }
     
     </script>
