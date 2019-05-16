@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal</title>
+    <link rel="stylesheet" href="./styles/02_LightBox.css">
+</head>
+<body>
+    <div>
+        <h1>light box</h1>
+        <img src="./02_images/img01.jpg" alt="" class="thumb" onclick="lightbox_open(1)" />
+        <img src="./02_images/img02.jpg" alt="" class="thumb" onclick="lightbox_open(2)" />
+        <img src="./02_images/img03.jpg" alt="" class="thumb" onclick="lightbox_open(3)" />
+        <img src="./02_images/img04.jpg" alt="" class="thumb" onclick="lightbox_open(4)" />
+    </div>
+    
+    <div id="block"></div>
+    
+    <div id="lightbox">
+        <h2>hong's 기억 속에 남아 있는 유럽</h2>
+        <figure>
+            <img src="./02_images/img01.jpg" alt="" />
+            <img src="./02_images/img02.jpg" alt="" />
+            <img src="./02_images/img03.jpg" alt="" />
+            <img src="./02_images/img04.jpg" alt="" />
+        </figure>
+        <div class="indicator">
+            <button onclick="change_img(this.innerHTML)">1</button>
+            <button onclick="change_img(this.innerHTML)">2</button>
+            <button onclick="change_img(this.innerHTML)">3</button>
+            <button onclick="change_img(this.innerHTML)">4</button>
+        </div>
+        <div class="btn_close" onclick="lightbox_close()">X</div>
+    </div>
+    
+    <script src="./scripts/02_LightBox.js"></script>
+</body>
+</html>
